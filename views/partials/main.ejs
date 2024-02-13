@@ -1,0 +1,14 @@
+<main>
+  <% if (details.length > 0) { %> 
+    <% details.forEach(detail => { %>
+        <a href="/blogs/<%= detail._id %>">
+            <div class="box">
+            <h1><%=detail.title%></h1>
+            <h3><%=detail.snippet%></h3>
+            </div>
+        </a>
+    <% }) %> 
+  <% } else { %>
+    <h3 class="noBlog">There is no blog to show</h3>
+  <% } %>
+</main>

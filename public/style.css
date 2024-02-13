@@ -1,0 +1,203 @@
+@font-face {
+  font-family: myfont;
+  src: url("./font.otf");
+}
+@font-face {
+  font-family: newFont;
+  src: url("./Brusher.ttf");
+}
+@font-face {
+  font-family: head;
+  src: url("./Mywriting.ttf");
+}
+@font-face {
+  font-family: content;
+  src: url("./HANDC___.TTF");
+}
+@font-face {
+  font-family: detsHead;
+  src: url("./AngelParadise.ttf");
+}
+@font-face {
+  font-family: detsbody;
+  src: url("./Sunny\ Brush.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+.upper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 48px;
+}
+.icon {
+  font-size: 20px;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#search-bar {
+  width: 25vw;
+  height: 27px;
+  outline: none;
+  border: 1.5px solid gray;
+  border-radius: 12px;
+  padding-left: 12px;
+  display: none;
+}
+.lower {
+  margin-bottom: 25px;
+}
+.lower h1 {
+  font-family: myfont;
+  letter-spacing: 1.1rem;
+  font-size: 80px;
+  text-align: center;
+}
+.lower h2 {
+  font-family: myfont;
+  letter-spacing: 1.1rem;
+  font-size: 30px;
+  text-align: center;
+}
+.lower h2 a {
+  text-decoration: none;
+  color: brown;
+}
+form {
+  max-width: 500px;
+  height: 50vh;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  margin: 20px auto;
+  /* border-top: 1px solid grey;
+  border-bottom: 1px solid grey; */
+  border-radius: 20px;
+  padding: 30px 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+form > input {
+  outline: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 90%;
+  border: 1.5px solid grey;
+}
+/* form > h1 {
+  font-family: newFont;
+  letter-spacing: 5px;
+  font-size: 35px;
+  margin-top: 30px;
+} */
+form > button {
+  padding: 10px;
+  outline: none;
+  border: 1px solid;
+  border: 2px solid white;
+  background: linear-gradient(90deg, grey, black);
+  color: white;
+  border-radius: 25px;
+  width: 90%;
+}
+main {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+main .box {
+  padding: 12px 15px;
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 5px darkgray;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out 0.5s;
+  /* align-items: center; */
+}
+main .box h1 {
+  font-family: head;
+}
+main .box h3 {
+  font-family: content;
+}
+main .box:hover {
+  border: 1px solid brown;
+  box-shadow: 5px 5px 5px burlywood;
+}
+a {
+  width: 100%;
+  color: black;
+  text-decoration: none;
+}
+main.content {
+  width: 95%;
+  /* height: 100vh; */
+  /* background-color: lightslategray; */
+  border: 1.5px solid lightslategray;
+  box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+  padding: 18px 32px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  /* position: relative; */
+}
+a.delete {
+  color: red;
+  cursor: pointer;
+}
+.trash {
+  font-size: 20px;
+}
+main.content .full h1 {
+  font-size: 75px;
+  font-family: detsHead;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main.content .full p {
+  margin-left: 50px;
+  font-size: 20px;
+  font-family: detsbody;
+  font-weight: 600;
+  text-align: center;
+}
+.noBlog {
+  font-family: detsHead;
+  text-align: center;
+  margin-top: 75px;
+  font-size: 70px;
+  display: block;
+  margin: 0 auto;
+}
+textarea {
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: 90%;
+  resize: none;
+  outline: none;
+}

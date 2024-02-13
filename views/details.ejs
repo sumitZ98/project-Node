@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs")%>
+    <!-- <%- include("./partials/fullBlog.ejs")%> -->
+    <main class="content">
+      <div class="full">
+        <a class="delete">
+          <ion-icon class="trash" name="trash-outline" data-doc="<%= details._id %>"></ion-icon>
+        </a>
+        <h1><%= details.title %></h1>
+        <p><%= details.body %></p>
+      </div>
+    </main>
+    <%- include("./partials/icon.ejs")%> <%- include('./js/search.js')%>
+
+    <script>
+      const trashcan = document.querySelector(".trash");
+      trashcan.addEventListener("click", (e) => {
+        // console.log('delete button is clicked')
+        const endpoint = `/blogs/${trashcan.dataset.doc}`;
+
+        fetch(endpoint, {
+          method: "DELETE",
+        })
+        .then((response)=> response.json())
+        .then((data)=> window.location.href = data.redirect)
+        .catch((err)=> {console.log(err)});
+      });
+    </script>
+  </body>
+</html>
